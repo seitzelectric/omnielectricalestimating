@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Omni Electrical Estimating LLC</title>
   <meta name="description" content="Electrical estimating, takeoffs, bid support, budget pricing, and preconstruction support." />
+  <link rel="stylesheet" href="style.css" />
 
   <style>
     :root {
@@ -151,19 +152,6 @@
       font-weight: bold;
     }
 
-    .contact-box {
-      background: var(--white);
-      padding: 32px;
-      border-radius: 10px;
-      max-width: 720px;
-      box-shadow: 0 4px 20px rgba(0,0,0,.06);
-    }
-
-    .contact-box p {
-      margin-bottom: 12px;
-      font-size: 1.05rem;
-    }
-
     footer {
       background: #030712;
       color: #d1d5db;
@@ -225,7 +213,7 @@ box-shadow:0 4px 12px rgba(0,0,0,.25);
     <p>
       Accurate electrical takeoffs, bid estimates, budget pricing, and change order support backed by real-world electrical construction experience.
     </p>
-    <a class="button" href="mailto:estimating@omnielectricalestimating.com">
+    <a class="button" href="#contact">
 Request an Estimate
 </a>
 
@@ -318,14 +306,93 @@ View Services
   <section id="contact">
     <h2 class="section-title">Request an Estimate</h2>
     <p class="intro">
-      For project pricing, takeoff support, or bid assistance, send project details by email.
+      Send the project details, bid timing, and estimating support needed. We will review your request and follow up with next steps.
     </p>
 
-    <div class="contact-box">
-      <p><strong>Email:</strong> estimating@omnielectricalestimating.com</p>
-      <p><strong>Phone:</strong> 417-543-3786</p>
-      <p><strong>Website:</strong> omnielectricalestimating.com</p>
-      <p><strong>Services:</strong> Commercial Electrical Estimating, Takeoffs, Bid Support, Budget Pricing, Change Orders, and Preconstruction Support</p>
+    <div class="contact-layout">
+      <form class="contact-form" action="https://formsubmit.co/estimating@omnielectricalestimating.com" method="POST">
+        <input type="hidden" name="_subject" value="New estimate request from Omni Electrical Estimating website" />
+        <input type="hidden" name="_next" value="https://omnielectricalestimating.com/thankyou.html" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <div class="form-grid">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Company
+            <input type="text" name="company" autocomplete="organization" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" />
+          </label>
+
+          <label>
+            Project Type
+            <select name="project_type" required>
+              <option value="">Select project type</option>
+              <option>Commercial</option>
+              <option>Industrial</option>
+              <option>Tenant Improvement</option>
+              <option>Design-Build</option>
+              <option>Residential</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            Bid Date
+            <input type="date" name="bid_date" />
+          </label>
+
+          <label>
+            Service Needed
+            <select name="service_needed" required>
+              <option value="">Select service</option>
+              <option>Electrical Takeoff</option>
+              <option>Complete Bid Estimate</option>
+              <option>Budget Pricing</option>
+              <option>Change Order Pricing</option>
+              <option>Bid Review</option>
+              <option>Preconstruction Support</option>
+            </select>
+          </label>
+
+          <label>
+            Drawings/Specs Ready
+            <select name="drawings_specs_ready" required>
+              <option value="">Select status</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>In progress</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Project Details
+          <textarea name="project_details" rows="6" required></textarea>
+        </label>
+
+        <button class="button form-button" type="submit">Submit Request</button>
+      </form>
+
+      <aside class="contact-box" aria-label="Contact information">
+        <p><strong>Email:</strong> <a href="mailto:estimating@omnielectricalestimating.com">estimating@omnielectricalestimating.com</a></p>
+        <p><strong>Phone/Text:</strong> <a href="tel:+14175433786">417-543-3786</a></p>
+        <p><strong>Hours:</strong> Mon-Fri, 8am - 6pm Central</p>
+        <p><strong>Typical Response Time:</strong> Same Business Day</p>
+        <p><strong>Software Supported:</strong> EBM, Accubid, ConEst, McCormick &amp; Bluebeam</p>
+      </aside>
     </div>
   </section>
 
